@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+<!--  Regular expression  -->
+
+/**
+ * Regular expression are a set of character that define a search pattern
+ * Basic of regex
+ *
+ * i Perform case-insensitive matching
+ * g Perform a global match
+ * m Perform multiline matching
+ */
+
+/**
+ * Regex has two functions
+ *
+ * search() Tests for matching in a string. This return the index of the match
+ * match() Test for matches. this return all the matches
+ */
+
+
+/**
+ * The js string object also has the following two regex related function
+ *
+ * exec(): Tests for matches in a string. This return the first match
+ * test(): This return True or False
+
+ */
+
+// ========= Commonly Uses Regexes ============
+
+// Any numeric
+
+// let reg = /\d+/
+//
+// console.log(reg.test('123'))
+// console.log(reg.test('1a'))
+// console.log(reg.test('aa'))
+
+// Only	Numeric	Characters
+
+// let reg2 = /^\d+$/
+//
+// console.log(reg2.test('123'))
+// console.log(reg2.test('1231df'))
+
+// Only alphanumeric characters
+
+let reg3 = /[a-ZA-Z0-9]/
+console.log(reg3.test('123'))
+
+<!--  Finding the words  -->
+
+
+    // let str = "He's my king from this day until his last day";
+    //
+    // let count = 0;
+    // const searchWord = 'day'
+    // let pos = str.indexOf(searchWord);
+    // console.log(pos);
+    //
+    // while (pos !== -1) {
+    //     count++;
+    //     pos = str.indexOf(searchWord, pos + 1);
+    // }
+    //
+    // console.log('count', count);
+
+
+<!--  SEARCH STRING  -->
+// let string1 = 'Red Dragon';
+//
+// console.log(string1.indexOf('Red'))
+
+
+</script>
+</body>
+</html>

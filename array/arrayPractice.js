@@ -9,18 +9,59 @@ const array = [
     [16, 17, 18, 19, 20],
     [21, 22, 23, 24, 25]
 ]
+//
+// console.log(array[3][1])
+// console.log(array[2][1])
+// console.log(array[1][1])
 
+// index right
 function spiralPrint(arr) {
-    let top = 0
-    let bottom = arr.length - 1
-    let right = arr[0].length - 1
-    let left = 0
-    for(let i = 0; i < arr.length; i++) {
-        console.log(arr[top][i])
-    }
-    top++
-    console.log(arr[top])
+    let topRow = 0
+    let leftCol = 0
+    let btmRow = arr.length - 1
+    let rightCol = arr[0].length - 1
 
+    while (topRow <= btmRow && leftCol <= rightCol) {
+        // print top row
+        /**
+         * i=0 i<= 4
+         */
+        for (let i = leftCol; i <= rightCol; i++) {
+            console.log(arr[topRow][i])
+        }
+        topRow++
+
+        /**
+         * i=1; i<=4
+         */
+        // print right column
+        for (let i = topRow; i <= btmRow; i++) {
+            console.log(arr[i][rightCol])
+        }
+        rightCol--
+
+        /**
+         * i=3 i>= 0
+         */
+        // print bottom row
+        if (topRow <= btmRow) {
+            for (let i = rightCol; i >= leftCol; i--) {
+                console.log(arr[btmRow][i])
+            }
+            btmRow--
+        }
+
+        /**
+         * i=3 i>1
+         */
+        // print left column
+        if (leftCol <= rightCol) {
+            for (let i = btmRow; i >= topRow; i--) {
+                console.log(arr[i][leftCol])
+            }
+            leftCol++
+        }
+    }
 }
 
 spiralPrint(array)
